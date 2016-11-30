@@ -21,6 +21,17 @@ table { margin: 0 auto; }
   }
 }
 
+.matchMessage{
+  font-weight: bold;
+  font-size: 20px;
+}
+.success{
+  color: green;
+}
+.fail{
+  color: red;
+}
+
 
 .memory-game{
   td {

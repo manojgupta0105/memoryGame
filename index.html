@@ -21,7 +21,7 @@
     </memory-game>
 
     <div>
-      <p>{{message}}</p>
+      <p class="matchMessage" ng-class="{'success': messageType == 'success', 'fail': messageType == 'fail'}">{{message}}</p>
       <button class="resetButton" ng-click="restartBtn()">Restart</button>
     </div>
 

@@ -19,6 +19,16 @@ table {
     color: #3da3d0;
     border: 1px solid lightgray; }
 
+.matchMessage {
+  font-weight: bold;
+  font-size: 20px; }
+
+.success {
+  color: green; }
+
+.fail {
+  color: red; }
+
 .memory-game td {
   border: 1px solid #CCCCCC; }
 .memory-game .card {

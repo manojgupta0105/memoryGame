@@ -2,16 +2,20 @@
 var module = angular.module("memoryGameApp", [])
 .controller('MainController', ['$scope', function($scope) {
   $scope.tilesSrc = ['sci_fi-48.png', 'sheep-48.png', 'fork-48.png']; //,'android-48.png'
+  $scope.messageType = null;
 
   // Listeners for events triggered by angular-memory-game
   $scope.$on("unmatchedPairEvent", function() {
     $scope.message = "Try again!";
+    $scope.messageType = 'fail';
   });
   $scope.$on("matchedPairEvent", function() {
     $scope.message = "Good match!";
+    $scope.messageType = 'success';
   });
   $scope.$on("completedEvent", function() {
     $scope.message = "Success!";
+    $scope.messageType = 'success';
   });
 
   $scope.restartBtn = function() {
