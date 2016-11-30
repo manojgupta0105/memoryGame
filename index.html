@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="memoryGameApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Coviam Task</title>
+    <link rel="stylesheet" href="css/memory-game-style.css">
+    <style>
+      
+    </style>
+  </head>
+  <body ng-controller="MainController">
+    <h1>Memory Game</h1>
+
+    <memory-game
+      columns="4"
+      lines="3"
+      tiles-dir="./assets/"
+      tiles-src="tilesSrc"
+      tile-width="48"
+      tile-height="48">
+    </memory-game>
+
+    <div>
+      <p>{{message}}</p>
+      <button ng-click="restartBtn()">Restart</button>
+    </div>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="js/main-controller.js"></script>
+  </body>
+</html>

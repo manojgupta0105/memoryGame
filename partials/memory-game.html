@@ -1,0 +1,10 @@
+<table class="memory-game">
+  <tr ng-repeat="row in grid">
+    <td ng-repeat="column in row" class="container">
+      <div class="card" ng-class="{flipped: column.flipped}" ng-click="flipTile(column)">
+          <img class="front" ng-src="{{tilesDir}}{{column.title}}" width="{{tileWidth}}" height="{{tileHeight}}">
+          <img class="back" ng-src="{{tilesDir}}back.png" width="{{tileWidth}}" height="{{tileHeight}}">
+      </div>
+    </td>
+  </tr>
+</table>

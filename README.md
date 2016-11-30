@@ -1,1 +1,3 @@
 # memoryGame
+
+Test your memory by finding the matching pairs in minimum posible try....
