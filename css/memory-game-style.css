@@ -1,44 +1,54 @@
-body { text-align: center; }
-table { margin: 0 auto; }
+body {
+  text-align: center;
+  background: #DFE2DB; }
+
+table {
+  margin: 0 auto; }
+
+.resetButton {
+  padding: 14px 35px;
+  outline: none;
+  font-size: 18px;
+  background-color: #3da3d0;
+  color: #fff;
+  letter-spacing: 1.5px;
+  border: none;
+  cursor: pointer; }
+  .resetButton:hover {
+    background-color: #fff;
+    color: #3da3d0;
+    border: 1px solid lightgray; }
 
 .memory-game td {
-  border: 1px solid #CCCCCC;
-}
-
+  border: 1px solid #CCCCCC; }
 .memory-game .card {
   cursor: pointer;
   position: relative;
-  line-height: 0;
-}
-
-.memory-game .back, .memory-game .front  {
+  line-height: 0; }
+.memory-game .attemptCounter {
+  border: none;
+  text-align: left;
+  padding-top: 10px;
+  font-weight: bold; }
+.memory-game .back, .memory-game .front {
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-}
-
+  transition: 0.5s ease-in-out; }
 .memory-game .back {
   left: 0;
   position: absolute;
   top: 0;
   -webkit-transform: rotateY(0deg);
-  transform: rotateY(0deg);
-}
-
+  transform: rotateY(0deg); }
 .memory-game .front {
   -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
-
+  transform: rotateY(180deg); }
 .memory-game .flipped .front {
   -webkit-transform: rotateY(0deg);
-  transform: rotateY(0deg);
-}
-
+  transform: rotateY(0deg); }
 .memory-game .flipped .back {
   -webkit-transform: rotateY(-180deg);
-  transform: rotateY(-180deg);
-}
+  transform: rotateY(-180deg); }

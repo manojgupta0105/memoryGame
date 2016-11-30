@@ -37,6 +37,11 @@ var module = angular.module("memoryGameApp", [])
     controller: ['$scope', '$attrs', '$timeout', function($scope, $attrs, $timeout) {
 
       /**
+       * variable to store the current score.
+       */
+       $scope.numberOfAttempt = 0;
+
+      /**
        * Init the game
        */
       $scope.start = function() {
@@ -82,6 +87,7 @@ var module = angular.module("memoryGameApp", [])
         if (!$scope.firstPick) {
           $scope.firstPick = tile;
         } else {
+          $scope.numberOfAttempt += 1;
           if ($scope.firstPick.title === tile.title) {
             $scope.unmatchedPairs--;
             $scope.$emit("matchedPairEvent");
@@ -105,6 +111,7 @@ var module = angular.module("memoryGameApp", [])
       $scope.$on("restartEvent", function(event, args) {
         if (args && args.tilesSrc) {
           $scope.tilesSrc = args.tilesSrc;
+          $scope.numberOfAttempt = 0;
         }
         $scope.start();
       });
